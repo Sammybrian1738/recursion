@@ -1,18 +1,21 @@
 package main
 
-import "recursion/pkg"
+import (
+	"fmt"
+	"recursion/pkg"
+)
 
 func main() {
-	// var n int
-	// fmt.Print("Enter number : ")
-	// fmt.Scanf("%d", &n)
+	var n int
+	fmt.Print("Enter number : ")
+	fmt.Scanf("%d", &n)
 
-	// fmt.Println("factorial of", n, ":", fact(n))
-	// fmt.Println(RecursivePrinter(5))
-	// n := 14
-	// for i := 0; i <= n; i++ {
-	// 	fmt.Println(pkg.Fibonacci(i))
-	// }
+	fmt.Println("factorial of", n, ":", pkg.Factorial(n))
+	for i := 0; i <= n; i++ {
+		fmt.Println(pkg.Fibonacci(i))
+	}
 
-	pkg.TowersOfHanoi(5, "A", "C", "B")
+	pkg.TowersOfHanoi(10, "A", "C", "B")
+	array := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	fmt.Println("Is array sorted? ", pkg.IsArraySorted(array, uint(len(array))))
 }
